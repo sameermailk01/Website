@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Urbanist:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    </head>
+<style>
+  
+    body {
+      margin: 0;
+      padding: 0;  
+  font-family: 'Manrope', sans-serif;
+}
+a{
+  font-family: 'Urbanist', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Urbanist', sans-serif;
+}
+
+
+.banner-image{
+            position: relative;
+            background-image: url('1.jpg');
+            background-size: cover;
+            z-index: 10;
+        }
+        .banner-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* 80% black with transparency */
+        z-index: -1;    
+    }
+
+    @media (max-width: 767.98px) { 
+        .navbar.fixed-top {
+            background-color: #1e1e1e;
+            margin: 0px !important;
+        }
+        .text-center > p{
+            width: 100% !important;
+        }
+    }
+.background-img {
+    position: relative;
+    height: 100vh;
+    background-image: url("1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.background-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.dark-mode .background-img::before {
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+    
+
+    @media (max-width: 767px) {
+      .navbar-brand img {
+      width: 231px;
+      height: 73px;
+      flex-shrink: 0;
+      max-width: 100%; /* Ensure the logo doesn't exceed its container's width */
+    height: auto;
+    max-width: calc(100% - 80px);
+    }
+  }
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+    .imgf{
+        position: absolute;
+    background: white;
+    padding: 10px;
+    top: -30px;
+    }
+    .imgn{
+        border: 3px solid  silver;
+    height: 50px !important;
+    width: 50px !important;
+    position : relative;
+    left: 84px;
+    bottom: 17px;
+    }
+
+    hr {
+      border-top: 1px solid #ccc;
+    }
+    .LastSection{
+      background-color: black;
+    }
+    .sectiontext2{
+      color: #696969;
+text-align: center;
+font-family: Manrope;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: 197.5%; /* 43.45px */
+    }
+    .sectiontext1{
+      color: #A0AABA;
+font-family: Manrope;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+    }
+    @media (max-width: 767px) {
+    .navbar-toggler {
+      position: absolute; /* Position the toggler button */
+      top: 50%; /* Center vertically */
+      right: 10px; /* Adjust the distance from the right edge */
+      transform: translateY(-50%); /* Center vertically */
+    }
+  }
+  .modal-backdrop {
+    position: relative !important;
+    height: auto !important;
+
+  }
+  .Section {
+    background-color: black;
+}
+  </style>
+</head>
+
+<body>
+  <!-- Background Image and Content -->
+  <div class="background-img">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="position: relative;">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand ms-5" href="#">
+          <img src="DESIGN.png" alt="Logo">
+        </a>
+        <div class=""><!-- This class hides the button on screens larger than lg (large) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+        <div class="collapse navbar-collapse mt-4" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="topDropdown1" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Technology
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="topDropdown1">
+                <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="topDropdown2" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Marketing
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="topDropdown2">
+                <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="topDropdown3" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Media
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="topDropdown3">
+                <li><a class="dropdown-item" href="#">Dropdown 1</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 2</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 3</a></li>
+                <li><a class="dropdown-item" href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="#">Clients</a>
+            </li>
+            <li class="nav-item text-white fs-5 mx-1 ">
+              <button class="btn btn-danger text-white" type="submit"><a>Clients Login</a></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <h1>Our Proprietary <br>Technology</h1>
+      <p>Managing all your marketing and media<br> needs from one portal</p>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">
+        Schedule a Demo
+      </button>
+    <!-- The Modal -->
+    <section class="bg-dark  "> 
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content py-2 px-2 Section ">
+            <!-- Modal Header -->
+            <div class="header">
+              <button type="button" class="btn-close float-end btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+      <form>
+        <div class="container">
+          <div class="row ">
+         <div class="col">
+          <div class="mb-3">
+          <label for="name" class="form-label"></label>
+          <input type="text" class="form-control bg-dark text-white border-0" placeholder="Name" id="name" name="name" required>
+        </div>
+         </div>
+         <div class="col">
+          <div class="mb-3">
+            <label for="email" class="form-label"></label>
+            <input type="email" class="form-control bg-dark text-white border-0" placeholder="Email address" id="email" name="email" required>
+          </div>
+         </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label for="phone" class="form-label"></label>
+                <input type="tel" class="form-control bg-dark text-white border-0" id="phone" placeholder="Phone Number" name="phone" required>
+              </div>
+            </div>
+           <div class="col">
+            <div class="mb-3">
+              <label for="website" class="form-label"></label>
+              <input type="url" class="form-control bg-dark text-white border-0" id="website" placeholder="your website" name="website">
+            </div>
+          </div>
+          </div>
+        <div class="mb-3">
+          <label for="message" class="form-label"></label>
+          <textarea class="form-control bg-dark text-white border-0" id="message" name="message" placeholder="Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+      </form>
+           
+          </div>
+        </div>
+      </div>
+  </div>
+    </section>
+      <button class="btn btn-outline-light mx-3 border-0 text-decoration-underline">Let's Talk</button>
+    </div>
+  </div>
+
+ 
+
+
+
+
+
+
+
+
+  <section class="bg-white">
+    <div class="container my-5 px-5 ">
+        <div class="row py-5">
+            <div class="col-md-6">
+<div class="">
+<h1 class="py-3">Automation</h1>
+<p class="fs-4">Automation saves brands time, money, and mistakes. With our Local Marketing Automation Platform, LMap, create programmatic rules and back-end coding solutions that can be implemented either programmatic profile rules on a location level, or programmatic brand rules on a brand level.</p>
+</div>
+
+            </div>
+          <div class="col-md-6">
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                          <!-- First row of the second column -->
+                          <div class="col py-2">
+                            <!-- Content for the first row of the second column -->
+                            <div class="card bg-white   shadow py-2 px-4 border-0 text-start">
+                                <img width="20%" src="Frame.png" class="img-fluid py-3 ">
+                            <h4 class="py-2">Automation</h4>
+                            <p class="fs-6 mb-4">Saving brands time, money, and mistakes.</p>
+                            </div>
+                          </div>
+                          <div class="col py-2">
+                            <div class="card bg-white  shadow py-2 px-4 border-0 text-start ">
+                                <img width="20%" src="Frame (1).png" class="img-fluid py-3">
+                            <h4 class="">Media Execution</h4>
+                            <p class="fs-6">Largest selection of national and local media options available for brands</p>
+                            </div>
+                          
+                        </div>
+                        </div>
+                        <div class="row">
+                            
+                            <div class="col py-2">
+                                <div class="card bg-white  shadow py-2 px-4 border-0 text-start ">
+                                    <img width="20%" src="Frame (2).png" class="img-fluid py-3">
+                                <h4 class="py-3">Analysis</h4>
+                                <p class="fs-6 ">Advanced tracking and segmented offer delivery</p>
+                                </div>
+                              
+                            </div>
+                            <div class="col py-2">
+                                <div class="card bg-white  shadow py-2 px-4 border-0 text-start ">
+                                    <img width="20%" src="Frame (3).png" class="img-fluid py-3">
+                                <h4 class="">DataAggregation</h4>
+                                <p class="fs-6">Simplified access to the world’s most sophisticated data sets</p>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+   
+
+</section>
+<section class="bg-dark ">
+    <div class="container py-5">
+        <h1 class="text-white text-center mt-5">
+            Enabling greater access to opportunities at <br>national, regional, and local level.
+        </h1>
+
+
+    </div>
+<div class="container py-5">
+    <div class="row ">
+        <div class="col-md-3">
+<div class=" text-center bg-dark  border-0">
+    <img src="Frame 126.png" width="25%" class=" mx-auto d-block ">
+    <h5 class="text-danger py-1">CREATIVE</h5>
+    <h1 class="text-white">Customization</h1>
+    <p class="text-white">Local creative customization leverages the programmatic profiles rules to version automatically on a local level, but also goes a step further by allowing customization within pre-determined</p>
+</div>
+        </div>
+        <div class="col-md-3">
+            <div class=" text-center bg-dark  border-0">
+                <img src="image 13 (traced).png" width="25%" class="mx-auto d-block">
+                <h5 class="text-danger py-1">GRAND</h5>
+                <h1 class=" text-white">Opening</h1>
+    <p class="text-white">Our Grand Opening automation takes the management and stress out of what is arguably the most angst-ridden part of opening a business.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class=" text-center  bg-dark  border-0">
+                <img src="image 14 (traced).png" width="25%" class="mx-auto d-block text-white">
+                <h5 class="text-danger py-1">CORPORATE</h5>
+                <h1 class=" text-white">Communication</h1>
+    <p class="text-white ">Our Corporate Communications Intranet enables you to house all of your other useful marketing communications, in one centralizedplace.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class=" text-center bg-dark  border-0">
+                <img src="image 15 (traced).png" width="25%" class="mx-auto d-block">
+                <h5 class="text-danger py-1">PHONE NUMBER</h5>
+                <h1 class=" text-white">Tracking</h1>
+    <p class="text-white">Our Intelligent Phone Number system will create a unique phone or fax number,layered over your phone line,to track and record calls, all stored and accessible within LMap.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+<section class="bg-white py-5 mt-5">
+    <div class="container text-center">
+
+        <h1>Our consultative approach</h1>
+        <h4>We’re here to guide your journey to the intelligent edge, from initial planning to <br>maintenance and optimization.</h4>
+    </div>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6 my-5">
+                <div class="card border-1  px-5">
+                    <img src="Frame (1).png" width="13%" class=" imgf"  >
+
+                <h3 class=" mt-5 text-center">Media Execution</h3>
+                <p>Leveraging our consumer, media distribution & research databases, we provide automated,Planning and Buying for ALL Paid Media. We have the largest consolidated selection of national and local media options available for brands today. Paid print, broadcast, cinema, radio, digital, mobile, direct and shared mail, outdoor, and non-traditional offerings, are all available through our automated platform LMap for franchisees to buy directly, either self-serve or with personalized media</p>
+                </div>
+                 </div>
+
+                 <div class="col-md-6 my-5">
+                    <div class="card border-1 px-5">
+                        <img src="Frame (5).png" width="13%" class="imgf">
+                    <h3 class=" mt-5  text-center">Analysis</h3>
+                    <p>Our Barcode Solution allows you to scan Barcodes that are part of coupons or loyalty programs. Creating a digital scanning solution when your POS can’t. Create unique or even one-time bar codes from within our system, and provide scanning even without a POS system. Layer on your client customer data to create advanced offer segmented campaigns, offer testing, loyalty programs, territory assessment, customer journey programs, or grand opening programs.</p>
+                    </div>
+                     </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="card border-1  px-5 py-4">
+                    <img src="Frame (3).png" width="13%" class="imgf">
+                <h4  class=" mt-3  text-center">Data Aggregation</h4>
+                <h8 >We aggregate data from premier partners.From demographic and digital data,Silvercrest works with the top data providers to leverage over 300 year’s worth of experience.The data is aggregated in LMap allowing you and your brand to have simplified access to the world’s most sophisticated data sets,with 14,000 data points,upon which you can also layer on your own sales data for specific targeting and robust reporting.</h8>
+                </div>
+                 </div>
+
+                 <div class="col-md-6  " >
+                  <div class="card border-1 px-5 py-4 ">
+                    <img src="image 12 (traced).png" width="13%" class="imgf">
+                    <h4 class="mt-3 text-center">Integrations</h4>
+                    <h8 >We build all of our own technology and thus are able to seamlessly integrate with other premier providers, enabling real-time access to posting, content, inventory, pricing, and deployment. Our current integrations include, but are not limited to, Facebook, Twitter, LinkedIn, Pinterest, Google, POS Systems (Aloha, etc), Centro, Spectrum, AT&T, Barcode Systems, and all media vehicles.</h8>
+                </div>
+                
+        </div>
+
+    </div>
+</section>
+<section class="bg-light   py-5">
+    <div class="container py-5 text-center">
+<h3 class="text-danger">DETAILS</h3>
+<h1>Facts for choosing us</h1>
+    </div>
+<div class="container ">
+   <div class="row"> 
+    <div class="col-md-3">
+        <div class="card text-center bg-light  border-0 ">
+            <img src="h.PNG" width="30%" class="z-1  mx-auto d-block ">
+            <h1 class="" style="font-size: 50px;">+232</h1>
+<p class="sectiontext2">Happy Clients</p>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-5">
+        <div class="card text-center bg-light  border-0 ">
+            <img src="b.PNG" width="30%" class="mx-auto d-block z-1">
+            <h1 class="" style="font-size: 50px;">+521</h1>
+<p class="sectiontext2">Projects Done</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center bg-light  border-0 ">
+            <img src="j.PNG" width="30%" class="mx-auto d-block z-1">
+            <h1 class="" style="font-size: 50px;">+1463</h1>
+<p class="sectiontext2">Hours of Support</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-center bg-light  border-0 ">
+          <img src="u.PNG" width="30%" class="mx-auto d-block z-1">
+            <h1 class="" style="font-size: 50px;">+15</h1>
+<p class="sectiontext2">Expert People</p>
+        </div>
+    </div>
+   </div>
+
+
+</div>
+</section>
+
+  <section class=" LastSection py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="DESIGN.png" class=" logoimg  mb-4">
+          <p class=" sectiontext1 ">1130 N. Valdivia Way Ste CPalm Springs, CA 92262</p>
+          <p class=" sectiontext1 "><img src="p.PNG"> +1 818-475-7620</p>
+          <p class=" sectiontext1  "><img src="Group 1.png"> envelope info@sca-mail.com</p>
+        </div>
+        <div class="col-md-3 mt-5">
+          <h3 class=" text-white">Navigation</h3>
+          <p class="sectiontext1  ">About us</p>
+          <p class=" sectiontext1  ">Press</p>
+          <p class=" sectiontext1  ">Blog</p>
+          <p class=" sectiontext1  ">Privacy policy</p>
+          <p class=" sectiontext1  ">Blog</p>
+          <p class=" sectiontext1 ">Do not sell my personal <br>information</p>
+        </div>
+        <div class="col-md-3 mt-5">
+          <h3 class=" text-white">Our Services</h3>
+          <p class="sectiontext1 ">Technology</p>
+          <p class="sectiontext1">Marketing</p>
+          <p class="sectiontext1 ">Media</p>
+        </div>
+        <div class="col-md-3 mt-5">
+          <h3 class=" text-white mb-4">Our Newsletter</h3>
+          <div class="input-group mb-3 rounded-pill bg-white">
+            <span class="input-group-text bg-transparent border-0">
+                <!-- Add your envelope logo here, replace 'envelope-logo.png' with your image path -->
+                <img src="12.PNG" alt="Envelope Logo" width="24">
+            </span>
+            <input type="text" class="form-control border-0 py-2 px-1" placeholder="Business email address " aria-label="Search" aria-describedby="basic-addon1">
+            <span class="input-group-text bg-danger border-0 mx-2 my-1 text-white bg-danger rounded-circle">
+              <i class="bi bi-arrow-up-right"></i>
+            </span>
+          </div>
+          <h3 class="text-white py-3">Social media</h3>
+          <div class="d-flex align-items-center py-2">
+            <i class="fab fa-facebook text-secondary  fs-4 mx-2 rounded-circle bg-white p-3"></i> 
+            <i class="fab fa-twitter text-secondary   fs-4 mx-2 rounded-circle bg-white p-3"></i>
+            <i class="fab fa-instagram text-secondary  fs-4 mx-2 rounded-circle bg-white p-3"></i>
+          </div>
+        
+        
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section LastSection py-2">
+    <hr class="text-secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+              <p class="text-secondary text-center sectiontext ">© Copyright Silvercrest Advertising. All Rights Reserved Designed By Sameer Malik
+              </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </body>
+</html>
